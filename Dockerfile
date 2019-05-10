@@ -6,7 +6,6 @@ RUN apk add python3
 # Copy scripts into place
 COPY index /
 COPY init /
-COPY interact /
 COPY search /
 
 # Set working directory
