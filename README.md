@@ -18,6 +18,3 @@ python run.py search \
   --collection robust04 \
   --opts search_args="-bm25" out_file_name="run.bm25.robust04"
 ```
-
-# Image Best Practices
-- Ensure your scripts handle new command-line parameters (i.e., in Python use `parse_known_args()` instead of `parse_args()` to help compatability with newer versions of `jig`.
