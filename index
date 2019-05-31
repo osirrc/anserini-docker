@@ -21,6 +21,18 @@ index_options = {
         "collection": "WashingtonPostCollection",
         "generator": "WapoGenerator"
     },
+    "cw09b": {
+        "collection": "ClueWeb09Collection",
+        "generator": "JsoupGenerator"
+    },
+    "cw12b": {
+        "collection": "ClueWeb12Collection",
+        "generator": "JsoupGenerator"
+    },
+    "gov2": {
+        "collection": "TrecwebCollection",
+        "generator": "JsoupGenerator"
+    },
     "robust04": {
         "collection": "TrecCollection",
         "generator": "JsoupGenerator"

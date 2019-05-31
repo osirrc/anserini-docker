@@ -2,7 +2,6 @@
 
 import argparse
 import json
-import os
 import subprocess
 
 parser = argparse.ArgumentParser()
@@ -12,7 +11,6 @@ args, unknown = parser.parse_known_args()
 
 collection_name = args.json["collection"]["name"]
 topic_path = args.json["topic"]["path"]
-topic_basename = os.path.basename(topic_path)
 top_k = args.json["top_k"]
 
 out_file_name = args.json["opts"]["out_file_name"]

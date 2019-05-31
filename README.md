@@ -4,6 +4,9 @@ Use the commands below to run the image from the [jig](https://github.com/osirrc
 The following corpus are supported:
 - `core17`
 - `core18`
+- `cw09b`
+- `cw12b`
+- `gov2`
 - `robust04`
 
 ## Prepare
@@ -19,9 +22,9 @@ The following `jig` command can be used to perform a search over `robust04`.
 ```
 python run.py search \
   --repo osirrc2019/anserini \
-  --output $(pwd)/out \
+  --output out/anserini \
   --qrels qrels/qrels.robust2004.txt \
-  --topic topics.robust04.301-450.601-700.txt \
+  --topic topics/topics.robust04.txt \
   --collection robust04 \
   --opts search_args="-bm25" out_file_name="run.bm25.robust04"
 ```
