@@ -48,7 +48,7 @@ MAP                                     | BM25      | +RM3      | +Ax       | QL
 
 #### core18
 
-MAP                                     | BM25      | BM25+RM3  | BM25+AX   | QL        | QL+RM3    | QL+AX     |
+MAP                                     | BM25      | +RM3  | +Ax   | QL        | +RM3    | +Ax     |
 :---------------------------------------|-----------|-----------|-----------|-----------|-----------|-----------|
 [TREC 2018 Common Core Track Topics](https://trec.nist.gov/data/core/topics2018.txt)| 0.2495    | 0.3136    | 0.2920    | 0.2526    | 0.3073    | 0.2966    |
 
