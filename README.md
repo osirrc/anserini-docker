@@ -20,6 +20,7 @@ The following `jig` command can be used to index TREC disks 4/5 for `robust04`:
 ```
 python run.py prepare \
   --repo osirrc2019/anserini \
+  --tag v0.1.0 \
   --collections robust04=/path/to/disk45=trectext
 ```
 
