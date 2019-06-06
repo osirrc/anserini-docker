@@ -12,7 +12,6 @@ args, unknown = parser.parse_known_args()
 collection_name = args.json["collection"]["name"]
 topic_path = args.json["topic"]["path"]
 top_k = args.json["top_k"]
-
 out_file_name = args.json["opts"]["out_file_name"]
 search_args = args.json["opts"]["search_args"]
 
