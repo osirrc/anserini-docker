@@ -107,4 +107,4 @@ The retrieval run is performed (using additional `--opts` params, see above) and
 
 ## Reviews
 
-+ Documentation reviewed at commit [xxxxxxx](https://github.com/osirrc/anserini-docker/commit/xxxxx) (mm/dd/yyyy) by [foo](https://github.com/foo/)
++ Documentation reviewed at commit [68f8291](https://github.com/osirrc/anserini-docker/commit/68f82912f7cc791e8d74877033a5f035d8b95035) (06/06/2019) by [Chris Kamphuis](https://github.com/chriskamphuis/)
