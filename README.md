@@ -1,5 +1,9 @@
 # Anserini OSIRRC Docker Image
 
+[![Build Status](https://travis-ci.com/osirrc/anserini-docker.svg?branch=master)](https://travis-ci.com/osirrc/anserini-docker)
+
+TODO: fix badge?
+
 [**Ryan Clancy**](https://github.com/r-clancy/) and [**Jimmy Lin**](https://github.com/lintool/)
 
 This is the docker image for the [Anserini](http://anserini.io/) toolkit (v0.5.0) conforming to the [OSIRRC jig](https://github.com/osirrc/jig/) for the [Open-Source IR Replicability Challenge (OSIRRC 2019) at SIGIR 2019](https://osirrc.github.io/osirrc2019/).
