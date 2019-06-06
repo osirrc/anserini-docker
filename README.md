@@ -29,7 +29,7 @@ The following `jig` command can be used to perform a retrieval run on the collec
 python run.py search \
   --repo osirrc2019/anserini \
   --output out/anserini \
-  --qrels qrels/qrels.robust2004.txt \
+  --qrels qrels/qrels.robust04.txt \
   --topic topics/topics.robust04.txt \
   --collection robust04 \
   --opts search_args="-bm25" out_file_name="run.bm25.robust04"
