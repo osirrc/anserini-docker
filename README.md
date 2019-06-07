@@ -38,6 +38,15 @@ python run.py search \
 
 The arguments `search_args` and `out_file_name` can be customized (i.e., `search_args="-ql -rm3"` and `out_file_name="run.ql.rm3.robust04"`)
 
+## Retrieval Methods
+
+TODO(Jimmy): Add description of retrieval method and parameters.
+
++ BM25
++ QL
++ RM3
++ Ax
+
 ## Expected Results
 
 The following numbers should be able to be re-produced using the scripts provided in the [bin](bin) directory.
