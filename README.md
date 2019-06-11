@@ -51,6 +51,12 @@ The Anserini image supports the following retrieval methods:
 
 The following numbers should be able to be re-produced using the scripts provided in the [bin](bin) directory.
 
+### robust04
+
+MAP                                     | BM25      | +RM3      | +Ax       | QL        | +RM3      | +Ax       |
+:---------------------------------------|-----------|-----------|-----------|-----------|-----------|-----------|
+[TREC 2004 Robust Track Topics](http://trec.nist.gov/data/robust/04.testset.gz)| 0.2531    | 0.2903    | 0.2895    | 0.2467    | 0.2747    | 0.2774    |
+
 ### core17
 
 MAP                                     | BM25      | +RM3      | +Ax       | QL        | +RM3      | +Ax       |
@@ -62,6 +68,14 @@ MAP                                     | BM25      | +RM3      | +Ax       | QL
 MAP                                     | BM25      | +RM3  | +Ax   | QL        | +RM3    | +Ax     |
 :---------------------------------------|-----------|-----------|-----------|-----------|-----------|-----------|
 [TREC 2018 Common Core Track Topics](https://trec.nist.gov/data/core/topics2018.txt)| 0.2495    | 0.3136    | 0.2920    | 0.2526    | 0.3073    | 0.2966    |
+
+### gov2
+
+MAP                                     | BM25      | +RM3      | +Ax       | QL        | +RM3      | +Ax       |
+:---------------------------------------|-----------|-----------|-----------|-----------|-----------|-----------|
+[TREC 2004 Terabyte Track: Topics 701-750](http://trec.nist.gov/data/terabyte04.html)| 0.2689    | 0.2844    | 0.2665    | 0.2681    | 0.2708    | 0.2666    |
+[TREC 2005 Terabyte Track: Topics 751-800](http://trec.nist.gov/data/terabyte05.html)| 0.3390    | 0.3820    | 0.3664    | 0.3303    | 0.3559    | 0.3646    |
+[TREC 2006 Terabyte Track: Topics 801-850](http://trec.nist.gov/data/terabyte06.html)| 0.3080    | 0.3377    | 0.3069    | 0.2996    | 0.3154    | 0.3084    |
 
 ### cw09b
 
@@ -77,20 +91,6 @@ MAP                                     | BM25      | +RM3      | +Ax       | QL
 :---------------------------------------|-----------|-----------|-----------|-----------|-----------|-----------|
 [TREC 2013 Web Track: Topics 201-250](http://trec.nist.gov/data/web2013.html)| 0.0468    | 0.0412    | 0.0435    | 0.0397    | 0.0322    | 0.0359    |
 [TREC 2014 Web Track: Topics 251-300](http://trec.nist.gov/data/web2014.html)| 0.0224    | 0.0210    | 0.0180    | 0.0235    | 0.0203    | 0.0186    |
-
-### gov2
-
-MAP                                     | BM25      | +RM3      | +Ax       | QL        | +RM3      | +Ax       |
-:---------------------------------------|-----------|-----------|-----------|-----------|-----------|-----------|
-[TREC 2004 Terabyte Track: Topics 701-750](http://trec.nist.gov/data/terabyte04.html)| 0.2689    | 0.2844    | 0.2665    | 0.2681    | 0.2708    | 0.2666    |
-[TREC 2005 Terabyte Track: Topics 751-800](http://trec.nist.gov/data/terabyte05.html)| 0.3390    | 0.3820    | 0.3664    | 0.3303    | 0.3559    | 0.3646    |
-[TREC 2006 Terabyte Track: Topics 801-850](http://trec.nist.gov/data/terabyte06.html)| 0.3080    | 0.3377    | 0.3069    | 0.2996    | 0.3154    | 0.3084    |
-
-### robust04
-
-MAP                                     | BM25      | +RM3      | +Ax       | QL        | +RM3      | +Ax       |
-:---------------------------------------|-----------|-----------|-----------|-----------|-----------|-----------|
-[TREC 2004 Robust Track Topics](http://trec.nist.gov/data/robust/04.testset.gz)| 0.2531    | 0.2903    | 0.2895    | 0.2467    | 0.2747    | 0.2774    |
 
 ## Implementation
 
