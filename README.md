@@ -10,7 +10,7 @@ This is the docker image for the [Anserini](http://anserini.io/) toolkit (v0.5.0
 This image is available on [Docker Hub](https://hub.docker.com/r/osirrc2019/anserini
 ) has been tested with the jig at commit [ca31987](https://github.com/osirrc/jig/commit/ca3198704795f2b6de8b78ed7a66bbdf1dccadb1) (6/5/2019).
 
-+ Supported test collections: `core17`, `core18`, `cw09b`, `cw12b`, `gov2`, `robust04`
++ Supported test collections: `robust04`, `core17`, `core18` (newswire); `gov2`, `cw09b`, `cw12b` (web)
 + Supported hooks: `init`, `index`, `search`
 
 ## Quick Start
@@ -40,12 +40,12 @@ The arguments `search_args` and `out_file_name` can be customized (i.e., `search
 
 ## Retrieval Methods
 
-TODO(Jimmy): Add description of retrieval method and parameters.
+The Anserini image supports the following retrieval methods:
 
-+ BM25
-+ QL
-+ RM3
-+ Ax
++ **BM25**: k1=0.9, b=0.4 (Robertson et al., 1995)
++ **QL** (query likelihood with Dirichlet smooth): mu=1000 (Zhai and Lafferty, 2001)
++ **+RM3** (RM3 variant of relevance models, applied on top of initial BM25 or QL results): [exact parameter settings](https://github.com/castorini/anserini/blob/master/src/main/java/io/anserini/search/SearchArgs.java) (Abdul-Jaleel et al., 2004)
++ **+Ax** (Semantic term matching in the axiomatic framework, applied on top of initial BM25 or QL results): [exact parameter settings](https://github.com/castorini/anserini/blob/master/src/main/java/io/anserini/search/SearchArgs.java) (Fang and Zhai, 2006)
 
 ## Expected Results
 
@@ -115,6 +115,12 @@ At this point, `jig` takes a snapshot and the indexed collections are persisted 
 The `search` [script](search) reads a JSON string (see [here](https://github.com/osirrc/jig#search)) containing the collection name (to map back to the index directory from the `index` hook) and topic path, among other options.
 The retrieval run is performed (using additional `--opts` params, see above) and output is placed in `/output` for the `jig` to evaluate using `trec_eval`.
 
+## References
+
++ Stephen E. Robertson, Steve Walker, Micheline Hancock-Beaulieu, Mike Gatford, and A. Payne. (1995) Okapi at TREC-4. _TREC_
++ ChengXiang Zhai and John Lafferty. (2001) A Study of Smoothing Methods for Language Models Applied to Ad Hoc Information Retrieval. _SIGIR_.
++ Nasreen Abdul-Jaleel, James Allan, W. Bruce Croft, Fernando Diaz, Leah Larkey, Xiaoyan Li, Donald Metzler, Mark D. Smucker, Trevor Strohman, Howard Turtle, and Courtney Wade. (2004) UMass at TREC 2004: Novelty and HARD. _TREC_.
++ Hui Fang and ChengXiang Zhai. (2006) Semantic Term Matching in Axiomatic Approaches to Information Retrieval. _SIGIR_.
 
 ## Reviews
 
