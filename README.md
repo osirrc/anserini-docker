@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/osirrc/anserini-docker.svg?branch=master)](https://travis-ci.com/osirrc/anserini-docker)
 [![Docker Build Status](https://img.shields.io/docker/cloud/build/osirrc2019/anserini.svg)](https://hub.docker.com/r/osirrc2019/anserini)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3240584.svg)](https://doi.org/10.5281/zenodo.3240584)
+[![DOI](https://zenodo.org/badge/176356474.svg)](https://zenodo.org/badge/latestdoi/176356474)
 
 [**Ryan Clancy**](https://github.com/r-clancy/) and [**Jimmy Lin**](https://github.com/lintool/)
 
