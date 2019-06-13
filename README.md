@@ -106,7 +106,7 @@ The `init` [script](init) is straightforward - it's simply a shell script (via t
 
 ### index
 
-The `index` Python [script](index) (via the `#!/usr/bin/python3 sh` she-bang) reads a JSON string (see [here](https://github.com/osirrc/jig#index)) containing at least one collection to index (including the name, path, and format).
+The `index` Python [script](index) (via the `#!/usr/bin/python3` she-bang) reads a JSON string (see [here](https://github.com/osirrc/jig#index)) containing at least one collection to index (including the name, path, and format).
 The collection is indexed and placed in a directory, with the same name as the collection, in the working dir (i.e., `/work/robust04`).
 At this point, `jig` takes a snapshot and the indexed collections are persisted for the `search` hook.
 
