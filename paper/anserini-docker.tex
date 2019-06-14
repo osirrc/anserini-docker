@@ -1,64 +1,83 @@
 \documentclass[sigconf]{acmart}
 
-%%
-%% \BibTeX command to typeset BibTeX logo in the docs
-\AtBeginDocument{%
-  \providecommand\BibTeX{{%
-    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+\usepackage{booktabs} % For formal tables
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\commentary}[1]{\noindent \red{{\bf Commentary}: #1}}
 
-%% Rights management information.  This information is sent to you
-%% when you complete the rights form.  These commands have SAMPLE
-%% values in them; it is your responsibility as an author to replace
-%% the commands and values with those provided to you when you
-%% complete the rights form.
-\setcopyright{acmcopyright}
-\copyrightyear{2018}
-\acmYear{2018}
-\acmDOI{10.1145/1122445.1122456}
-
-%% These commands are for a PROCEEDINGS abstract or paper.
-\acmConference[Woodstock '18]{Woodstock '18: ACM Symposium on Neural Gaze Detection}{June 03--05, 2018}{Woodstock, NY}
-\acmBooktitle{Woodstock '18: ACM Symposium on Neural Gaze Detection, June 03--05, 2018, Woodstock, NY}
-\acmPrice{15.00}
-\acmISBN{978-1-4503-9999-9/18/06}
-
-%%\acmSubmissionID{123-A56-BU3}
-%%\citestyle{acmauthoryear}
+\setcopyright{none}
+\settopmatter{printacmref=false} % Removes citation information below abstract
+\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
+\pagestyle{plain} % removes running headers
 
 \begin{document}
 
-  \title{Dockerizing Anserini for The Open-Source IR Replicability Challenge (OSIRRC 2019)}
+\title{The Anserini Docker Image for OSIRRC at SIGIR 2019}
 
-  \author{Ryan Clancy}
-  \affiliation{\institution{David R. Cheriton School of Computer Science \\ University of Waterloo}}
-  \email{ryan.clancy@uwaterloo.ca}
+\author{Ryan Clancy and Jimmy Lin}
+\affiliation{\vspace{0.1cm}
+  \department{David R. Cheriton School of Computer Science}
+  \institution{University of Waterloo}
+}
 
-  \author{Jimmy Lin}
-  \affiliation{\institution{David R. Cheriton School of Computer Science \\ University of Waterloo}}
-  \email{jimmylin@uwaterloo.ca}
-
-  \renewcommand{\shortauthors}{R. Clancy and J. Lin}
-
-  \begin{abstract}
-    Abstract goes here.
-  \end{abstract}
+%  \begin{abstract}
+%    Abstract goes here.
+%  \end{abstract}
 
   %\keywords{datasets, neural networks, gaze detection, text tagging}
 
-  \maketitle
+\maketitle
 
-  \section{Introduction}
+%\section{Overview}
 
-    Intro goes here.
+\noindent {\bf Image Source:} \texttt{\small https://github.com/osirrc/anserini-docker} \\
+{\bf Docker Hub:} \texttt{\small https://hub.docker.com/r/osirrc2019/anserini} \\
 
-  \section{Dockerizing}
-  \subsection{Dockerfile}
-  \subsection{Hooks}
+\commentary{My suggestion for these ``docker papers'' is to provide the URLs to the implementations and leave technical details there (i.e., don't repeat stuff that's better captured in the README of the source image repo.}
 
-  \section{Runs}
+\section{Overview}
 
-  \bibliographystyle{ACM-Reference-Format}
-  \bibliography{references}
+Anserini~\cite{Yang_etal_SIGIR2017,Yang_etal_JDIQ2018} is an open-source information retrieval toolkit built around Lucene to facilitate replicable research.
+The project grew out of the Open-Source IR Reproducibility Challenge from 2015~\cite{Lin_etal_ECIR2016} and reflects growing community interest in using Lucene for academic IR research~\cite{azzopardi2016lucene4ir,Azzopardi_etal_SIGIR2017}.
+As Lucene was not originally designed as a research toolkit, Anserini aims to fill in ``the missing parts'' that allow researchers to run standard {\it ad hoc} retrieval experiments ``right out of the box'', including competitive baselines and integration hooks for neural ranking models.
+Given Lucene's tremendous production deployment base (typically via Solr or Elasticsearch), better alignment between research in information retrieval and the practice of building research world search engines promises a smoother transition path from the lab to the ``real world'' for research innovations.
+
+\smallskip
+\commentary{Here, my suggestion is to provide an overview of the underlying system, techniques, etc.}
+
+\section{Technical Design}
+
+\noindent {\bf Supported Collections:}\\
+\texttt{robust4}, \texttt{core17}, \texttt{core18},
+\texttt{gov2}, \texttt{cw09b}, \texttt{cw12b}
+
+\smallskip \noindent {\bf Supported Hooks:}\\
+\texttt{init}, \texttt{index}, \texttt{search}
+
+\smallskip \noindent
+As with Lucene itself, Anserini is implemented in Java.
+Thus, the Anserini Docker image primarily consisted of lightweight hooks implemented in Python that wraps underlying Java commands.
+
+\smallskip
+\commentary{Here, my suggestion is to provide an overview of the technical design of the image, without going into too much detail.}
+
+\section{Retrieval Models}
+
+The Anserini Docker image 
+
+\smallskip
+\commentary{Here, my suggestion is to provide an overview of the retrieval models...}
+
+
+\section{OSIRRC Experience}
+
+Anserini was the first image that was created in conjunction with the jig...
+
+\smallskip
+\commentary{Like, how was the experience?}
+
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{anserini-docker}
 
 \end{document}
 
