@@ -1,8 +1,8 @@
-# Anserini OSIRRC Docker Image
+# OSIRRC Docker Image for Anserini
 
 [![Build Status](https://travis-ci.com/osirrc/anserini-docker.svg?branch=master)](https://travis-ci.com/osirrc/anserini-docker)
 [![Docker Build Status](https://img.shields.io/docker/cloud/build/osirrc2019/anserini.svg)](https://hub.docker.com/r/osirrc2019/anserini)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3240584.svg)](https://doi.org/10.5281/zenodo.3240584)
+[![DOI](https://zenodo.org/badge/176356474.svg)](https://zenodo.org/badge/latestdoi/176356474)
 
 [**Ryan Clancy**](https://github.com/r-clancy/) and [**Jimmy Lin**](https://github.com/lintool/)
 
@@ -106,7 +106,7 @@ The `init` [script](init) is straightforward - it's simply a shell script (via t
 
 ### index
 
-The `index` Python [script](index) (via the `#!/usr/bin/python3 sh` she-bang) reads a JSON string (see [here](https://github.com/osirrc/jig#index)) containing at least one collection to index (including the name, path, and format).
+The `index` Python [script](index) (via the `#!/usr/bin/python3` she-bang) reads a JSON string (see [here](https://github.com/osirrc/jig#index)) containing at least one collection to index (including the name, path, and format).
 The collection is indexed and placed in a directory, with the same name as the collection, in the working dir (i.e., `/work/robust04`).
 At this point, `jig` takes a snapshot and the indexed collections are persisted for the `search` hook.
 
