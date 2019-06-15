@@ -8,7 +8,8 @@
 
 This is the docker image for the [Anserini](http://anserini.io/) toolkit (v0.5.1) conforming to the [OSIRRC jig](https://github.com/osirrc/jig/) for the [Open-Source IR Replicability Challenge (OSIRRC) at SIGIR 2019](https://osirrc.github.io/osirrc2019/).
 This image is available on [Docker Hub](https://hub.docker.com/r/osirrc2019/anserini
-) has been tested with the jig at commit [ca31987](https://github.com/osirrc/jig/commit/ca3198704795f2b6de8b78ed7a66bbdf1dccadb1) (6/5/2019).
+).
+The [OSIRRC 2019 image library](https://github.com/osirrc/osirrc2019-library) contains a log of successful executions of this image.
 
 + Supported test collections: `robust04`, `core17`, `core18` (newswire); `gov2`, `cw09b`, `cw12b` (web)
 + Supported hooks: `init`, `index`, `search`
@@ -20,7 +21,7 @@ The following `jig` command can be used to index TREC disks 4/5 for `robust04`:
 ```
 python run.py prepare \
   --repo osirrc2019/anserini \
-  --tag v0.1.0 \
+  --tag v0.1.1 \
   --collections robust04=/path/to/disk45=trectext
 ```
 
