@@ -7,8 +7,7 @@
 [**Ryan Clancy**](https://github.com/r-clancy/) and [**Jimmy Lin**](https://github.com/lintool/)
 
 This is the docker image for the [Anserini](http://anserini.io/) toolkit (v0.5.1) conforming to the [OSIRRC jig](https://github.com/osirrc/jig/) for the [Open-Source IR Replicability Challenge (OSIRRC) at SIGIR 2019](https://osirrc.github.io/osirrc2019/).
-This image is available on [Docker Hub](https://hub.docker.com/r/osirrc2019/anserini
-).
+This image is available on [Docker Hub](https://hub.docker.com/r/osirrc2019/anserini).
 The [OSIRRC 2019 image library](https://github.com/osirrc/osirrc2019-library) contains a log of successful executions of this image.
 
 + Supported test collections: `robust04`, `core17`, `core18` (newswire); `gov2`, `cw09b`, `cw12b` (web)
