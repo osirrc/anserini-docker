@@ -125,4 +125,4 @@ The retrieval run is performed (using additional `--opts` params, see above) and
 
 ## Reviews
 
-+ Documentation reviewed at commit [`68f8291`](https://github.com/osirrc/anserini-docker/commit/68f82912f7cc791e8d74877033a5f035d8b95035) (06/06/2019) by [Chris Kamphuis](https://github.com/chriskamphuis/),  [Claudia Hauff](https://github.com/chauff/) and [Craig Macdonald](https://github.com/cmacdonald)
++ Documentation reviewed at commit [`68f8291`](https://github.com/osirrc/anserini-docker/commit/68f82912f7cc791e8d74877033a5f035d8b95035) (06/06/2019) by [Chris Kamphuis](https://github.com/chriskamphuis/),  [Claudia Hauff](https://github.com/chauff/), [Craig Macdonald](https://github.com/cmacdonald) and [Antonio Mallia](https://github.com/amallia)
