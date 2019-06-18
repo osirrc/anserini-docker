@@ -1,15 +1,14 @@
 language: minimal
 services:
-  - docker
+- docker
 script:
-  - docker build -t "$REPO":${TRAVIS_TAG:-latest} .
+- docker build -t "$REPO":${TRAVIS_TAG:-latest} .
 after_success:
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - if [[ ( "$TRAVIS_BRANCH" == "master" ) || ( -n "$TRAVIS_TAG" ) ]]; then
-      docker push "$REPO":${TRAVIS_TAG:-latest};
-    fi
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+- if [[ ( "$TRAVIS_BRANCH" == "master" ) || ( -n "$TRAVIS_TAG" ) ]]; then docker push
+  "$REPO":${TRAVIS_TAG:-latest}; fi
 env:
   global:
-  - secure: aw9xsewlj5MqpgfMPMxhbRpWwQN+FZrRNDn7X7yNSbHgaDJGruDD9qpJw+jJYi7X9WYWe5bAHtsIWEHjTpXRHO3L2wkR9NHM2N0Vc9MCiggYE9zTaC/avdtdepBZXnEPjTmdojVk65IhcwXWFjEJlbAycLYTBN2D/MoQllCyzfUDU9bw2FkCKheBR/ate1IirU7opeNxy8fQkHpLKMRjjTve8A4+4JnURG7kxJVl7NeqXzAO+4v02BiwbXZmmsBy+d14AL99IxRxteQQJhZpxufryP78hfwiQOutjZamdX26thnlvh+UKfbdAWiopxHiVNmF3LlUTgmoMQxstSxcu6za5LXDSq9Ad0IPqvCdAxKOZeQT/f7b5YEakwyhsMZfcQtO3fpfeP7TgLcNuu12dJH/599ZRxgG2rabOFWBtg736FfYJmruQGJbiiv4vdEOcug3ttw1k9tsHsv0qGqGw4EDY2VEY3FBv9GK1fu1rTbv8NBdFmfzjxCo0e1GYOXDgXGofAs50Ooln2PGdYWwHtrMVEiQQa2EOB1Aa0Fv6xehz4kDtt9TH5t3hho459a+t3gJZvExAfCdDzWRD/HcosqX2mc/7ZDCA3eDHREA7O8PmUivtGk9x+Uf7mb+Dw8fDLA9XZI84510lOwfthjcoB0KxRJ49iQmXZVhMYRdgZ0=
-  - secure: EXKU6cF/fJt8xmt1K1Ccn6uXFeIKYvfgpnJQ1mvobmAztl1dvkD2karjT+Wvnsdz2PIVZXdFaH+3pAL3H71OYTnUunilAMQWbI75/+u9c8WJtt1rGmaDEgvXRYG2FjBurruozteWsLY6DJkPxeZorC/dcWivloLdHxpsCmm7J1OyJZCOFIpb9Zmd+d26YpiOF4Dws9xVRvhqx6QY1qKpWsSNXmRWoBwWETbPG7yUCx+vUOdIs50I0vb/L5YBV65+QtVi8ebi0W6x1/Ap/h8HwJwuE2+TXSGXtM3u8rsy7ukAUCrNWg09/bOMxxMu8eg/ter9GrwPXrooyY6g+z1AcTLetnp7JZ8kTUCSBC4zcuwZWKTJ/Ia2rvhovEma+OsvhYSxOVbooNMIZygeRKrw2ptSQdz/G9WC86M4nPsOZIg6F1R2fiIpApKelTIwGHoslKszIt2xZDuYcmiAYjcLxlY3PaCFtRdDCPowc/If80+/7siLVgUdpKJz6aEbnhFX1Hi/i9jeQ4CeljhI837P4kTNZX8o7M2yv+XY/NtNBSEXrEas1HaBlOExLQqtXOifjyEFbVyQGIeabFFY+6QH3TIg+llFeTIwujRE1wz77OgqrexRff/v3SJZAqa9ERc+GwJV1EOtBYtSWOe+juGW+5O0/03/AU4V3RbUT5RVL3E=
   - REPO=osirrc2019/anserini
+  - secure: rZomYOkIchi6vapYbqThBhSC76uUB09otMybMC0ORcz7vuJWl3Mf9sr34Pqvr5aYEgaTIaGbD5RSy012B4KA9m745ojjBuImLMm950xMOa4XiVk0sRRB6Rutg8PK5mmztv0cFgdqvvS5ZWLiuponvWwiEv1nBuk232uGxbauxeH4fe3BTzWt0WVfiOQBsuW13d80uOPj+pAB+L6ru6xDwqFzzzj+tOeXjTOhuwnxE1DSG+pBaS183R8WmMld/H/aM6a/Rv7sGfBkdcv35vpN10hN4Vxg93F9SP9D/w5WlIB5GI74ZHtoVXAAkkAzEQua61mgk4WLQVlrn4f+yB2StfmxIT3Bn/6UrXTisFJK7Mj0vWfV/7v9Oos0AA/SrcbaxgnFz0QWN8PTjI8HtdwMN9nFMPU9KBYXjpmXKG20UbYDGDaVL/dcvhC9jM9DXTDH3lIYFAyBaCz6a+hwyX2tCPwU1A8DFQ87rzxNnQcw/SdL5K4r/0IoeEQjbPF7b3iY82qQZUSrwcyFp6nR50KMd/0r3qicJ3LtXQJD8VqjCh0cU66bDVd3xgA4nmc4Kqob9eQan/iwNY1BdI1F2aTMFHBtow+JjIse6jwVHHB+ayDI2ax1CyG5QK5NQ6OcZVjd5A2+MwBhGFVIVBKYYqOEOgvbFH1HIdXP0voVHSqLzNI=
+  - secure: ckIDXlAN4YA1UkXrR1uVAggxyy3HuY3x+jcp/Z5HCzGyoaldnLKY7X9JUIGPAZpymDNo3TKkjBicL8tI4WNqOOgNhEUIZcmX5Tm1kM3dFT/jFsgx212KGATkitfR8Z8WclMHwtsGFR1XiwCUU6QBnP4NnFi6SOik8KgSEorjg67Rrkh8FP1WsT504Trdsic+aQENjICZG7Syj+QLQLO6j/0g51+JPHpmU7bbY7wVO78etgfRnITOuKLXvC3iY+SDfc4UIODRAi1a/3jdxPMLS+6G6kgfY1ZQvv9VCQN/ZKvZU5nxJYfj5cBM4NvkYBfkgHf6jsZb7KKASU5gmWYaaJes/78D6HGdN++c/bRL6bfe2nh6apDlHdM9A/ZBEfqP3Kb/PvWHByqBT1z6WpBlazVNDPgp32GJaShJnlosi6x1gw3MMdHpAmjI0eNmOZb7eD32KqcftLx5NrbJE/ddGHFl73rSx2XJdsQRjPQXgKbwU8gTjXNXPm2eU5uPUHj86fGRhCtv6dRAF1ROLZ9eUuOcyFwXENL0VQ3yPEEeZVU0aGV/TNl1TKYqeS7ARS0J84T8FTKZoiUQQUj04WfORj3V7/fKG7AY3lHAVDJZeC2nyVyev80/FORGQUzWDc3oJ55xeSLTRWk1jAWfd8gxXS6nDXW52ai6BHrEiYPF2sg=
